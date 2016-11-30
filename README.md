@@ -1,7 +1,7 @@
 OpenMugen
 =========
 
-Found this randomly. Builds with a few fixes. No idea if it works ¯\_(ツ)_/¯
+Found this randomly. Builds with a few fixes. No idea if it works ¯\\\_(ツ)\_/¯
 
 Building
 ========
