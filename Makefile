@@ -14,10 +14,14 @@ LIBS =  -lSDL
 #CFLAGS = 
 ALLFLAGS = $(INCS) $(LIBS) $(CFLAGS)
 
+prefix ?= /usr
+exec_prefix ?= $(prefix)
+bindir ?= $(exec_prefix)/games
+INSTALL ?= install
+INSTALL_PROGRAM ?= $(INSTALL)
+
 BIN  = BIN/openMugen
-RM = rm -f
-
-
+RM = rm -r
 	
 all: before-all $(LINKOBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(ALLFLAGS)
@@ -29,6 +33,9 @@ before-all:
 
 run:
 	cd "BIN"&&"./openMugen"
+
+install:
+	$(INSTALL_PROGRAM) $(BIN) $(DESTDIR)$(bindir)/openMugen
 
 clean:
 	${RM} OBJ BIN
