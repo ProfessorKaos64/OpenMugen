@@ -7,11 +7,11 @@ CC   = gcc
 OTHEROBJ = 
 LINKOBJ = $(OTHEROBJ) OBJ/main.o OBJ/game.o OBJ/global.o OBJ/SDLManager.o OBJ/VideoSystem.o OBJ/scale2xSDL.o OBJ/SDL_framerate.o OBJ/scale2x.o OBJ/MemManager.o OBJ/SffManager.o OBJ/player.o OBJ/Stack.o OBJ/VM.o OBJ/StateManager.o OBJ/AirManager.o OBJ/engine.o OBJ/ControllerExecuter.o OBJ/tokenizer.o OBJ/StateParser.o OBJ/CmdManager.o 
 
-CXXFLAGS = -I"/usr/local/include/SDL"
+CXXFLAGS = -I"/usr/include/SDL"
 
-INCS =  -I"/usr/local/include/SDL"
+INCS =  -I"/usr/include/SDL"
 LIBS =  -lSDL
-CFLAGS = -Wnowrite-string
+#CFLAGS = 
 ALLFLAGS = $(INCS) $(LIBS) $(CFLAGS)
 
 BIN  = BIN/openMugen
